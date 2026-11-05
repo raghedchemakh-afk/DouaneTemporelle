@@ -1,19 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_main_rc"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/layout_main_rc"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="24dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- 1: عنوان الاستمارة -->
+        <TextView
+            android:id="@+id/txt_titre_rc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DOUANE TEMPORELLE"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <!-- 2: اسم المسافر -->
+        <TextView
+            android:id="@+id/txt_nom_rc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nom du voyageur"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/edt_nom_rc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Entrez votre nom"
+            android:inputType="textCapWords"
+            android:minHeight="48dp" />
+
+        <!-- 3: سنة الميلاد -->
+        <TextView
+            android:id="@+id/txt_naissance_rc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Année de naissance"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/edt_naissance_rc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Exemple : 2000"
+            android:inputType="number"
+            android:maxLength="4"
+            android:minHeight="48dp" />
+
+        <!-- 4: سنة الوجهة -->
+        <TextView
+            android:id="@+id/txt_destination_rc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Année de destination"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/edt_destination_rc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Exemple : 2050"
+            android:inputType="number"
+            android:maxLength="4"
+            android:minHeight="48dp" />
+
+        <!-- 5: سبب السفر -->
+        <TextView
+            android:id="@+id/txt_motif_rc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Motif du voyage"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <Spinner
+            android:id="@+id/spn_motif_rc"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+        <!-- 6: زر فحص الملف -->
+        <Button
+            android:id="@+id/btn_inspecter_rc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inspecter le profil"
+            android:layout_marginTop="30dp" />
+
+    </LinearLayout>
+
+</ScrollView>
