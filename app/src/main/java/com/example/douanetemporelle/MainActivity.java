@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 // 11: إنشاء Intent للانتقال إلى النشاط الثاني
-                Intent intent = new Intent();
+                Intent intent = new Intent(MainActivity.this, VerificationActivity.class);
 
                 // 12: إرسال المعلومات باستعمال المفاتيح الديناميكية
                 intent.putExtra(getNomKey(MATRICULE), nom);
