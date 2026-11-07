@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_result_rc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#2E7D32">
+
+    <TextView
+        android:id="@+id/txt_titre_result_rc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RÉSULTAT DU CONTRÔLE"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginBottom="40dp" />
+
+    <TextView
+        android:id="@+id/txt_message_result_rc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bon voyage !"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginBottom="50dp" />
+
+    <Button
+        android:id="@+id/btn_nouveau_voyageur_rc"
+        android:layout_width="2074dp"
+        android:layout_height="1369dp"
+        android:text="Nouveau voyageur"
+        android:textSize="18sp" />
+
+</LinearLayout>
