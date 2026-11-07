@@ -5,14 +5,17 @@
     android:id="@+id/scroll_main_rc"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="#EAF4F8">
 
     <LinearLayout
         android:id="@+id/layout_main_rc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="24dp"
+        android:background="#FFFFFF"
+        android:layout_margin="16dp">
 
         <!-- 1: عنوان الاستمارة -->
         <TextView
@@ -22,8 +25,9 @@
             android:text="DOUANE TEMPORELLE"
             android:textSize="25sp"
             android:textStyle="bold"
+            android:textColor="#173B57"
             android:gravity="center"
-            android:padding="16dp" />
+            android:padding="20dp" />
 
         <!-- 2: اسم المسافر -->
         <TextView
@@ -32,6 +36,8 @@
             android:layout_height="wrap_content"
             android:text="Nom du voyageur"
             android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#263B50"
             android:layout_marginTop="20dp" />
 
         <EditText
@@ -40,7 +46,10 @@
             android:layout_height="wrap_content"
             android:hint="Entrez votre nom"
             android:inputType="textCapWords"
-            android:minHeight="48dp" />
+            android:minHeight="52dp"
+            android:padding="12dp"
+            android:backgroundTint="#008C95"
+            android:textColor="#263B50" />
 
         <!-- 3: سنة الميلاد -->
         <TextView
@@ -49,7 +58,9 @@
             android:layout_height="wrap_content"
             android:text="Année de naissance"
             android:textSize="16sp"
-            android:layout_marginTop="16dp" />
+            android:textStyle="bold"
+            android:textColor="#263B50"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:id="@+id/edt_naissance_rc"
@@ -58,7 +69,10 @@
             android:hint="Exemple : 2000"
             android:inputType="number"
             android:maxLength="4"
-            android:minHeight="48dp" />
+            android:minHeight="52dp"
+            android:padding="12dp"
+            android:backgroundTint="#008C95"
+            android:textColor="#263B50" />
 
         <!-- 4: سنة الوجهة -->
         <TextView
@@ -67,7 +81,9 @@
             android:layout_height="wrap_content"
             android:text="Année de destination"
             android:textSize="16sp"
-            android:layout_marginTop="16dp" />
+            android:textStyle="bold"
+            android:textColor="#263B50"
+            android:layout_marginTop="20dp" />
 
         <EditText
             android:id="@+id/edt_destination_rc"
@@ -76,7 +92,10 @@
             android:hint="Exemple : 2050"
             android:inputType="number"
             android:maxLength="4"
-            android:minHeight="48dp" />
+            android:minHeight="52dp"
+            android:padding="12dp"
+            android:backgroundTint="#008C95"
+            android:textColor="#263B50" />
 
         <!-- 5: سبب السفر -->
         <TextView
@@ -85,20 +104,27 @@
             android:layout_height="wrap_content"
             android:text="Motif du voyage"
             android:textSize="16sp"
-            android:layout_marginTop="16dp" />
+            android:textStyle="bold"
+            android:textColor="#263B50"
+            android:layout_marginTop="20dp" />
 
         <Spinner
             android:id="@+id/spn_motif_rc"
             android:layout_width="match_parent"
-            android:layout_height="48dp" />
+            android:layout_height="52dp"
+            android:backgroundTint="#008C95" />
 
         <!-- 6: زر فحص الملف -->
         <Button
             android:id="@+id/btn_inspecter_rc"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:text="Inspecter le profil"
-            android:layout_marginTop="30dp" />
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:backgroundTint="#008C95"
+            android:layout_marginTop="32dp" />
 
     </LinearLayout>
 
