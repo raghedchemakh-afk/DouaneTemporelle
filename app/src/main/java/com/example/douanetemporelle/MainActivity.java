@@ -32,7 +32,10 @@ public class MainActivity extends AppCompatActivity {
     public static String getMotifKey(String matricule) {
         return matricule + "_MOTIF_VOYAGE";
     }
-
+    // 3: إنشاء مفتاح نتيجة القرار
+    public static String getVerdictKey(String matricule) {
+        return matricule + "_VERDICT";
+    }
     // 3: تعريف عناصر الواجهة
     private EditText edtNom;
     private EditText edtNaissance;
