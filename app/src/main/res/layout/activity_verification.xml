@@ -7,27 +7,30 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:padding="16dp"
-    android:background="#FFFFFF">
+    android:background="#E7E0D2">
 
-    <!-- 2: صورة جواز السفر على اليسار بنسبة 0.3 -->
+    <!-- 2: صورة المسافر على اليسار -->
     <ImageView
         android:id="@+id/img_passeport_rc"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="0.3"
-        android:src="@android:drawable/ic_menu_gallery"
+        android:src="@android:drawable/ic_menu_camera"
         android:scaleType="centerInside"
-        android:contentDescription="صورة جواز السفر" />
+        android:background="#D5C7AA"
+        android:padding="12dp"
+        android:contentDescription="Photo du voyageur" />
 
-    <!-- 3: معلومات المسافر على اليمين بنسبة 0.7 -->
+    <!-- 3: صفحة جواز السفر على اليمين -->
     <RelativeLayout
         android:id="@+id/layout_verification_rc"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="0.7"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:background="#F8F2E5">
 
-        <!-- 4: عنوان واجهة التحقق -->
+        <!-- 4: عنوان جواز السفر -->
         <TextView
             android:id="@+id/txt_titre_verification_rc"
             android:layout_width="match_parent"
@@ -35,53 +38,97 @@
             android:text="DOUANE TEMPORELLE"
             android:textSize="23sp"
             android:textStyle="bold"
-            android:gravity="center" />
+            android:textColor="#173451"
+            android:gravity="center"
+            android:padding="8dp" />
 
-        <!-- 5: اسم المسافر -->
+        <!-- 5: عنوان الوثيقة -->
         <TextView
-            android:id="@+id/txt_nom_voyageur_rc"
+            android:id="@+id/txt_sous_titre_rc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/txt_titre_verification_rc"
-            android:layout_marginTop="35dp"
-            android:text="Nom du voyageur :"
-            android:textSize="18sp" />
+            android:text="PASSEPORT DE VOYAGE TEMPOREL"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#A17B42"
+            android:gravity="center"
+            android:paddingBottom="12dp" />
 
-        <!-- 6: العمر الزمني للمسافر -->
-        <TextView
-            android:id="@+id/txt_age_temporel_rc"
+        <!-- 6: informations du voyageur -->
+        <LinearLayout
+            android:id="@+id/layout_infos_rc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txt_nom_voyageur_rc"
-            android:layout_marginTop="20dp"
-            android:text="Âge temporel :"
-            android:textSize="18sp" />
+            android:layout_below="@id/txt_sous_titre_rc"
+            android:orientation="vertical"
+            android:background="#EFE5D1"
+            android:padding="14dp">
 
-        <!-- 7: سبب الرحلة -->
+            <TextView
+                android:id="@+id/txt_nom_voyageur_rc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nom du voyageur :"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#173451"
+                android:padding="6dp" />
+
+            <TextView
+                android:id="@+id/txt_age_temporel_rc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Âge temporel :"
+                android:textSize="16sp"
+                android:textColor="#173451"
+                android:padding="6dp" />
+
+            <TextView
+                android:id="@+id/txt_motif_voyage_rc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Motif du voyage :"
+                android:textSize="16sp"
+                android:textColor="#173451"
+                android:padding="6dp" />
+
+        </LinearLayout>
+
+        <!-- 7: ختم مراقبة الجمارك -->
         <TextView
-            android:id="@+id/txt_motif_voyage_rc"
+            android:id="@+id/txt_tampon_rc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txt_age_temporel_rc"
-            android:layout_marginTop="20dp"
-            android:text="Motif du voyage :"
-            android:textSize="18sp" />
+            android:layout_below="@id/layout_infos_rc"
+            android:layout_marginTop="14dp"
+            android:text="✦ CONTRÔLE TEMPOREL ✦"
+            android:textColor="#A13D35"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp" />
 
-        <!-- 8: زر الموافقة على الرحلة -->
+        <!-- 8: زر الموافقة -->
         <Button
             android:id="@+id/btn_accepter_rc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@id/btn_refuser_rc"
-            android:text="Approuver le saut temporel" />
+            android:layout_marginBottom="8dp"
+            android:text="Approuver le saut temporel"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#28734A" />
 
-        <!-- 9: زر رفض الرحلة -->
+        <!-- 9: زر الرفض -->
         <Button
             android:id="@+id/btn_refuser_rc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:text="Refuser (Risque de paradoxe)" />
+            android:text="Refuser (Risque de paradoxe)"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#A93636" />
 
     </RelativeLayout>
 

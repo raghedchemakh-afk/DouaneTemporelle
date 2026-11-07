@@ -1,3 +1,4 @@
+
 package com.example.douanetemporelle;
 
 import android.content.Intent;
@@ -75,27 +76,21 @@ public class VerificationActivity extends AppCompatActivity {
             btnAccepter.setEnabled(false);
 
         } else {
-
             btnAccepter.setEnabled(true);
         }
 
         // 8: معالجة زر الموافقة على الرحلة
         btnAccepter.setOnClickListener(v -> {
-            // سيتم تفعيل هذا الزر بعد إنشاء النشاط الثالث
-            // envoyerVerdict(nom, true);
+            envoyerVerdict(nom, true);
         });
 
         // 9: معالجة زر رفض الرحلة
         btnRefuser.setOnClickListener(v -> {
-            // سيتم تفعيل هذا الزر بعد إنشاء النشاط الثالث
-            // envoyerVerdict(nom, false);
+            envoyerVerdict(nom, false);
         });
     }
 
-    /*
     // 10: إرسال النتيجة واسم المسافر إلى النشاط الثالث
-    // سيتم تفعيل هذه الدالة بعد إنشاء ResultActivity
-
     private void envoyerVerdict(String nom, boolean verdict) {
 
         Intent intent = new Intent(
@@ -104,7 +99,7 @@ public class VerificationActivity extends AppCompatActivity {
         );
 
         intent.putExtra(
-                MainActivity.MATRICULE + "_VERDICT",
+                MainActivity.getVerdictKey(MainActivity.MATRICULE),
                 verdict
         );
 
@@ -115,5 +110,4 @@ public class VerificationActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
-    */
 }
